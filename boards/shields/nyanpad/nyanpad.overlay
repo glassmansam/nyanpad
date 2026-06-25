@@ -9,16 +9,16 @@
 		diode-direction = "col2row";
 		wakeup-source;
 
-		col-gpios =
-			<&gpio0 11 GPIO_ACTIVE_HIGH>
-			, <&gpio0 12 GPIO_ACTIVE_HIGH>
-			, <&gpio0 14 GPIO_ACTIVE_HIGH>
+		col-gpios
+			= <&pro_micro 9 GPIO_ACTIVE_HIGH>  /* D9/A9  -> P1.06 -> 106 */
+            , <&pro_micro 8 GPIO_ACTIVE_HIGH>  /* D8/A8  -> P1.04 -> 104 */
+            , <&pro_micro 7 GPIO_ACTIVE_HIGH>  /* D7     -> P0.11 -> 011 */
 			;
 
-		row-gpios =
-			<&gpio0 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio0 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		row-gpios
+			= <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* D14     -> P1.11 -> 111 */
+            , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* D16     -> P0.10 -> 010 */
+            , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* D10/A10 -> P0.09 -> 009 */
 			;
 	};
 
@@ -53,8 +53,8 @@
 
 	encoder0: encoder_0 {
 		compatible = "alps,ec11";
-		a-gpios = <&gpio0 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-		b-gpios = <&gpio0 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; /* D20/A2 -> P0.29 -> 029 */
+        b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; /* D21/A3 -> P0.31 -> 031 */
 		steps = <80>;
 		status = "okay";
 	};
