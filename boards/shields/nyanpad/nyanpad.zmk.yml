@@ -1,0 +1,12 @@
+file_format: "1"
+id: nyanpad
+name: Nyanpad
+type: shield
+url: https://example.com/nyanpad
+requires:
+  - nice_nano_v2
+features:
+  - keys
+  - underglow
+  - encoder
+  - studio
