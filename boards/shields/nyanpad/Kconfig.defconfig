@@ -1,7 +1,7 @@
 if SHIELD_NYANPAD
 
 config ZMK_KEYBOARD_NAME
-	default "Nyanpad"
+	default "Meowpad"
 
 # bluetooth stuff 
 
